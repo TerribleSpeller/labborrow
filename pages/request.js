@@ -36,12 +36,16 @@ export default function request({equipment}) {
 
             if (response.ok) {
             console.log('Request submitted');
+            alert("Your Request has been submitted!\n");
+            location.reload();
             } else {
             console.error('Failed to submit request');
+            alert("Failed to submit Request!")
             }
         } 
         catch (error) {
           console.error('Error submitting request, Please contact Jason Alexander (2602188673) regarding the error:', error);
+          alert(error);
         }
     };
 
@@ -72,7 +76,7 @@ export default function request({equipment}) {
                 <label htmlFor="jurusan">Jurusan:</label>
                 <br />
                 <select type="text" id="jurusan" name="jurusan">
-                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="" selected disabled hidden>Choose here</option> 
                     <option value="ARE">Automotive and Robotics Engineering</option>
                     <option value="PDE">Product Design Engineering</option>
                     <option value="BE">Business Engineering</option>
