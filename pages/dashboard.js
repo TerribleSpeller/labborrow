@@ -1,5 +1,7 @@
 import clientPromise from "../lib/mongodb";
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 
 
 export default function equipment({ equip, returnProps }) {
@@ -22,7 +24,7 @@ export default function equipment({ equip, returnProps }) {
               const updatedData = updatedEquip.filter((object) => object._id !== id);
               setUpdatedEquip(updatedData);
               console.log('Request rejected successfully');
-              location.reload();
+              location.reload;
             } else {
               console.error('Failed to reject request');
             }
@@ -58,13 +60,20 @@ export default function equipment({ equip, returnProps }) {
         }
     };
 
+    const router = useRouter();
+
+    //So when the Admin wants to update the entry, the ID can be taken. 
+    const handleUpdateClick = (id) => {
+      router.push(`/updatepage?id=${id}`); //
+    };
+
     
     return (
         
         <div>
             <h1>Dashboard</h1>
             <p>
-                Please contact Jason Alexander (Phone Number Here) to inform of any issues
+                Please contact Jason Alexander (081293820288/jasonalexanderyuwono@gmail.com) to inform of any issues
             </p>
 
             <h2>Requests</h2>
@@ -81,8 +90,8 @@ export default function equipment({ equip, returnProps }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {returnProps ? (
-                        returnProps.map((object) => (
+                    {equip ? (
+                        equip.map((object) => (
                             <tr key={object._id}>
                                 <td>{object.timestamp}</td>
                                 <td>{object.name}</td>
@@ -120,7 +129,7 @@ export default function equipment({ equip, returnProps }) {
                         <td>Returned?</td>
                         <td>Return Date</td>
                         <td>Return Condition</td>
-
+                        <td>Update Entry?</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -137,6 +146,7 @@ export default function equipment({ equip, returnProps }) {
                                 <td>{object.returnStat}</td>
                                 <td>{object.returnDate}</td>
                                 <td>{object.returnCon}</td>
+                                <td><button onClick={() => handleUpdateClick(object._id)}>Update Entry</button></td>
                             </tr>
                         ))
                     ) : (
