@@ -34,20 +34,19 @@ export default function Home({ isConnected }) {
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
+          Welcome to <a href="https://nextjs.org">BASE LAB Equipment Borrowing Website</a>
         </h1>
 
         {isConnected ? (
-          <h2 className="subtitle">You are connected to MongoDB</h2>
+          <h2 className="subtitle">Servers are up!</h2>
         ) : (
           <h2 className="subtitle">
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{" "}
-            for instructions.
+            Servers are down. Please contact Jason Alexander (jasonalexanderyuwono<span class="blockspam" aria-hidden="true">chinesewebsite</span>@<span class="blockspam" aria-hidden="true">lmaoblocked</span>gmao;<span class="blockspam" aria-hidden="true">thelandsoftheequestrians</span>.com) to rectify this issue. 
           </h2>
         )}
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Get started by logging in <code>pages/index.js</code>
         </p>
 
         
