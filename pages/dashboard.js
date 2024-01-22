@@ -1,14 +1,26 @@
 import clientPromise from "../lib/mongodb";
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSession, getSession } from "next-auth/react";
 
 
 
 export default function equipment({ equip, returnProps }) {
+    const { data: session } = useSession();
+
+    const router = useRouter()
+
+
+    if(session?.user?.admin == false){
+        router.push("equipment")
+    }
+
 
     const [updatedEquip, setUpdatedEquip] = useState(equip);
 
     const handleReject = async (id) => {
+        console.log(await getSession())
+
         console.log(id)
         try {
             const response = await fetch('./api/denyfunction', {
@@ -60,7 +72,6 @@ export default function equipment({ equip, returnProps }) {
         }
     };
 
-    const router = useRouter();
 
     //So when the Admin wants to update the entry, the ID can be taken. 
     const handleUpdateClick = (id) => {
@@ -74,6 +85,10 @@ export default function equipment({ equip, returnProps }) {
             <h1>Dashboard</h1>
             <p>
                 Please contact Jason Alexander (081293820288/jasonalexanderyuwono@gmail.com) to inform of any issues
+            </p>
+            <hr/>
+            <p>
+                Welcome {session?.user?.email} to the Dashboard.
             </p>
 
             <h2>Requests</h2>
