@@ -6,10 +6,18 @@ import { GetServerSideProps } from "next";
 export default function Logout() {
     const router = useRouter();
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        await signOut({ callbackUrl: '/' });
+        try {
+            const res = await signOut({ callbackUrl: '/' });
 
+            console.log(res)
+            if(res.error) {
+                console.log(res.error)
+            }
+        } catch(error) {
+            console.log(error)
+        }
     }  
 
     return (
