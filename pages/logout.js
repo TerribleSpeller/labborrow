@@ -14,7 +14,7 @@ export default function Logout() {
 
     return (
         <>
-            <div onLoad={GetServerSideProps}>
+            <div>
                 <h1>Sign Out</h1>
                 <form onSubmit={handleSubmit}>
                     <button>Sign Out!</button>
