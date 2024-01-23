@@ -55,7 +55,7 @@ export default function UpdateFunction({ updateentry, id }) {
        <p>
         Updating Entry: {id}
         </p>
-        <table>
+        <table className="table table-dark table-bordered border-primary">
             <thead>
                 <tr>
                     <td>Timestamp</td>

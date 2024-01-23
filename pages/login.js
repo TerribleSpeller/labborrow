@@ -4,7 +4,6 @@ import {useRouter} from 'next/navigation'
 import { useSession } from "next-auth/react";
 import { GetServerSideProps } from "next";
 import { useEffect } from 'react';
-import { getServerSideProps } from './dashboard';
 
 
 export default function Login() {
@@ -35,12 +34,6 @@ export default function Login() {
             console.log(loginError)
         }
     }
-
-    useEffect(() => {
-        window.addEventListener('pageshow', GetServerSideProps);
-        window.addEventListener('pageshow', getServerSideProps);
-
-    })
 
 
     return (
