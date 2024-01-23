@@ -28,7 +28,6 @@ export default function Login() {
             if(res.error) {
                 setloginError("Invalid Credentials")    
             }
-            setTimeout(blankFunction, 10000)
             router.push(`/equipment?=loggedin`,  undefined, { shallow: true })
         } catch(loginError) {
             console.log(loginError)
