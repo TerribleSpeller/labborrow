@@ -49,22 +49,24 @@ const Navbar = () => {
                   <Link href="/labs" className="nav-link link-module">BASE LABs</Link>
                 </div>
               </div>
-          </li>
+            </li>
             <li className="nav-item pt-3 ">
               <Link href="/projects" className="nav-link link-module">
               <span>Projects</span>
               </Link>
             </li>
-            <li className="nav-item pt-3">
-              
+            { session &&
+              <>
+                <li className="nav-item pt-3">
                 <div className="dropdown">
-                  <button className="nav-link dropbtn btn">Lab Equipment</button>
+                < Link href="/equipment" className="nav-link link-module dropbtn">Lab Equipment</Link>
                   <div class="dropdown-content">
-                    <Link href="/equipment" className="nav-link link-module">List of Equipment</Link>
                     <Link href="/request" className="nav-link link-module">Request Equipment</Link>
                   </div>
                 </div>
             </li>
+              </>
+            }
             <li className="nav-item pt-3 ">
               <Link href="/labactivities" className="nav-link link-module">
               <span>Lab Activites</span>
@@ -78,14 +80,23 @@ const Navbar = () => {
                 </li>
             }
             <li className="nav-item pt-3 ">
-              <Link href="/about" className="nav-link link-module">
-              <span>About</span>
-              </Link>
+              <div className="dropdown">
+                <Link href="/about" className="nav-link link-module dropbtn"><span>About</span></Link>
+                <div class="dropdown-content">
+                    <Link href="/equipment" className="nav-link link-module">Affliated Clubs</Link>
+                </div>
+              </div>
+
             </li>
           </ul>
         </header>
-        <header className="d-flex flex-wrap justify-content mb-2 border-bottom"></header>
-        <button className="btn btn-outline-light mb-0" onClick={() => router.refresh()}>Data not updating? Click here to Refresh!</button>
+        {session && 
+            <>
+              <header className="d-flex flex-wrap justify-content mb-2 border-bottom"></header>
+              <button className="btn btn-outline-light mb-0" onClick={() => router.refresh()}>Data not updating? Click here to Refresh!</button>
+            </>
+        }
+
         <header className="d-flex flex-wrap justify-content mb-5 pb-2 border-bottom"></header>
       </div>
       <div className="">

@@ -7,7 +7,6 @@ import img5 from '../public/images/img-5.jpg'
 import img6 from '../public/images/img-6.jpg'
 import img7 from '../public/images/img-7.jpg'
 import img8 from '../public/images/img-8.jpg'
-
 import lab1 from '../public/images/018.jpg'
 import lab2 from '../public/images/021.jpg'
 import lab3 from '../public/images/022.jpg'
