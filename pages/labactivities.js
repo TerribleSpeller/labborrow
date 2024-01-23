@@ -11,7 +11,7 @@ export default function labactivitespage() {
                     <li>IOT Design & Application (ARE)</li>
                     <li>Expression Technique (PDE)</li>
                     <li>Digital Modelling & Simulation (PDE)</li>
-                    <li>Financial Engineering</li>
+                    <li>Financial Engineering (BE)</li>
                 </ul>
             </div>
         </>
