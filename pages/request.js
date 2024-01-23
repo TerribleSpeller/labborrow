@@ -1,8 +1,11 @@
 import { stringify } from "querystring";
 import clientPromise from "../lib/mongodb";
 import { useState } from 'react';
+import { useSession, getSession } from "next-auth/react";
+import { GetServerSideProps } from "next";
 
 export default function request({equipment}) {
+    const { data: session } = useSession();
     //This is the schema to be submitted
     const [formData, setFormData] = useState({
         name: '',
@@ -11,7 +14,7 @@ export default function request({equipment}) {
         NIM: '',
         jurusan: '',
         equipmentChoice: '',
-      });
+      });   
 
     //Handler for Input Change
     const handleInputChange = (e) => {
@@ -40,7 +43,7 @@ export default function request({equipment}) {
             location.reload();
             } else {
             console.error('Failed to submit request');
-            alert("Failed to submit Request!")
+            alert("Failed to submit Request! (This maybe because its all been requested)")
             }
         } 
         catch (error) {
@@ -51,7 +54,7 @@ export default function request({equipment}) {
 
     //Actual Website Code
     return(
-        <div>
+        <div onLoad={GetServerSideProps}>
             <h1>Request some Lab Equipment!</h1>
             <p>
                 Please contact Pak Faisal (Phone Number Here) to inform that you;ve forwarded a request
@@ -63,7 +66,7 @@ export default function request({equipment}) {
                 <br />
                 <label htmlFor="email">Email:</label>
                 <br />
-                <input type="text" id="email" name="email" />
+                <input type="text" id="email" name="email" value={session?.user.email} />
                 <br/>
                 <label htmlFor="telephoneNumber">No. Telefon:</label>
                 <br />

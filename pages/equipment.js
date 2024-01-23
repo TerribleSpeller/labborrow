@@ -1,11 +1,34 @@
 import clientPromise from "../lib/mongodb";
 import { useEffect, useState } from 'react';
+import { useSession, getSession } from "next-auth/react";
+import Link from 'next/link';
+import { GetServerSideProps } from "next";
 
 
 export default function equipment({ equip }) {
+    const { data: session } = useSession();
+
+
+    useEffect(() => {
+        const onShowFunction = () => {
+            console.log('Page is shown!');
+            useEffect(() => {
+                window.addEventListener('pageshow', GetServerSideProps);
+        
+            })
+          };
+        
+          window.addEventListener('pageshow', GetServerSideProps);
+    
+          return () => {
+            window.removeEventListener('pageshow', onShowFunction);
+          };
+    }, [])
     return (
         
-        <div>
+        <div onLoadStart={GetServerSideProps}>
+
+            <br/>
             <h1>Equipment List</h1>
             <p>
                 Please contact Pak Faisal (Phone Number Here) to inform that you;ve forwarded a request
@@ -36,9 +59,13 @@ export default function equipment({ equip }) {
 
                 
             </table>
+                        
         </div>
+        
     );
 }
+
+export {GetServerSideProps}
 
 export async function getServerSideProps() {
     try {

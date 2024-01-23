@@ -33,6 +33,17 @@ export default async function handler(req, res) {
         throw new Error('Document not found in the source collection');
       }
 
+      const updateQtyNum = await db.collection("lab").findOne({ name: sourceDocument.equipmentChoice})
+      console.log(updateQtyNum)
+      console.log(sourceDocument.equipmentChoice)
+      const numtoUpdate = updateQtyNum.borrowedqty + 1
+      
+      if(updateQtyNum) {
+        await db.collection("lab").updateOne({name: sourceDocument.equipmentChoice}, {$set:{borrowedqty: numtoUpdate}})
+      }
+
+
+
       res.status(200).json({ message: 'Request accepted and copied successfully' });
     } catch (error) {
       console.error('Error accepting request:', error);

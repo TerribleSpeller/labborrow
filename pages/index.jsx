@@ -20,16 +20,10 @@ export const getServerSideProps = async () => {
 export default function Home({ isConnected }) {
   return (
     <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">BASE LAB Equipment Borrowing Website</a>
+          Welcome to BASE LAB Equipment Borrowing Website
         </h1>
-
+        <br/>
         {isConnected ? (
           <h2 className="subtitle">Servers are up!</h2>
         ) : (
@@ -38,20 +32,17 @@ export default function Home({ isConnected }) {
           </h2>
         )}
 
-        <p className="description">
-          Get started by logging in <code>pages/index.js</code>
-        </p>
-
-        <Link href="/login">Log In</Link>
-        <Link href="/signup">Sign Up!</Link>
-
-        
-      </main>
+        <div className="d-flex flex-row justify-content-center">
+        <Link className="px-2" href="/login"> Log In </Link>
+      
+        <Link className="px-2" href="/signup"> Sign Up! </Link>
+        </div>
+  
 
 
       <style jsx>{`
         .container {
-          min-height: 100vh;
+          min-height: 50vh;
           padding: 0 0.5rem;
           display: flex;
           flex-direction: column;

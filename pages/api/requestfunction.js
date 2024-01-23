@@ -8,6 +8,19 @@ export default async function handler(req, res) {
         const client = await clientPromise;
         const db = client.db("lab_equipment");
 
+        try {
+            const equiptoCheck = await db.collection('lab').findOne({name: equipmentChoice})
+            console.log(equiptoCheck)
+            if (equiptoCheck.qty > equiptoCheck.borrowedqty) {
+                pass
+            } else {
+                res.status(404).json({message: "Already Borrowed"})
+                return null;
+            }
+        } catch(error) {
+
+        }
+
         // Insert data into the 'requests' collection 
         await db.collection('lab_requests').insertOne({
             timestamp: new Date(),

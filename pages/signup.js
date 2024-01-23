@@ -2,6 +2,7 @@
 import Signup from "../components/registerForm";
 import { useSession, getSession } from "next-auth/react";
 import { useRouter } from 'next/navigation'
+import { GetServerSideProps } from "next";
 
 export default function RegisterPage() {
     const { data: session } = useSession();
@@ -14,7 +15,7 @@ export default function RegisterPage() {
     }
 
    return (
-        <div >
+        <div onLoad={GetServerSideProps}>
             <Signup/>
         </div>
    )

@@ -10,16 +10,24 @@ export default async function handler(req, res) {
             const client = await clientPromise;
             const db = client.db("lab_equipment");
             const objectId = new ObjectId(objectid);
-            console.log(objectid);
-            console.log(objectId)
-            console.log(req.body)
+            //console.log(objectid);
+            //console.log(objectId)
+            //console.log(req.body)
+            const resultCheck = await db.collection('approved_requests').findOne({ _id: objectId })
+
+            const equipName = resultCheck.equipmentChoice
+            const returnStatePre = resultCheck.returnStat
+
       
             const result = await db.collection('approved_requests').updateOne(
               { _id: objectId },
               { $set: { returnStat: returnStat, returnDate: returnDate, returnCon: returnCon } }
             );
             
-      
+
+            if (returnStat == "true" & returnStatePre == "false") {
+              const numUpdate = await db.collection('lab').updateOne({name: equipName}, { $inc: {borrowedqty : -1}})
+            }
             if (result.modifiedCount) {
               res.status(201).json({ message: 'Request submitted successfully' });
             } else {

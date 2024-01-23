@@ -86,11 +86,12 @@ export default function Signup() {
         <>
             <div>
                 <h1>Sign Up!</h1>
+                <br/>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name ="username" placeholder="username" onChange={e => setRegisterUsername(e.target.value)}></input>
-                    <input type="text" name ="email" placeholder="email" onChange={e => setRegisterEmail(e.target.value)}></input>
-                    <input type="password" name ="password" placeholder="password" onChange={e => setregisterPassword(e.target.value)}></input>
-                    <button>Sign Up! </button>
+                    <input type="text" name ="username" placeholder="username" onChange={e => setRegisterUsername(e.target.value)}></input><br/><br/>
+                    <input type="text" name ="email" placeholder="email" onChange={e => setRegisterEmail(e.target.value)}></input><br/><br/>
+                    <input type="password" name ="password" placeholder="password" onChange={e => setregisterPassword(e.target.value)}></input><br/><br/>
+                    <button>Sign Up! </button><br/>
                     <br/>
                     <h3>Please do not use the same password as your regular password</h3>
 

@@ -92,7 +92,7 @@ export default function equipment({ equip, returnProps }) {
             </p>
 
             <h2>Requests</h2>
-            <table>
+            <table className="table table-dark table-bordered border-primary">
                 <thead>
                     <tr>
                         <td>Timestamp</td>
@@ -131,7 +131,7 @@ export default function equipment({ equip, returnProps }) {
 
             <h2>Accepted Requests</h2>
 
-            <table>
+            <table className="table table-dark table-bordered border-primary">
                 <thead>
                     <tr>
                         <td>Timestamp</td>

@@ -2,6 +2,7 @@ import clientPromise from "../lib/mongodb";
 import { useRouter } from 'next/navigation';
 import { ObjectId } from 'mongodb';
 import { useEffect, useState } from 'react';
+import { GetServerSideProps } from "next";
 
 
 export default function UpdateFunction({ updateentry, id }) {
@@ -49,7 +50,7 @@ export default function UpdateFunction({ updateentry, id }) {
     };
 
   return (
-    <div>
+    <div onLoad={GetServerSideProps}>
        <h1>Update Page</h1>
        <p>
         Updating Entry: {id}
@@ -129,11 +130,11 @@ export default function UpdateFunction({ updateentry, id }) {
 export async function getServerSideProps(context) {
   try {
     const  newid  = context.query; // Use context.query to get the query parameters
-    console.log(context.query);
-    console.log("Logged Context!")
-    console.log(newid)
+   // console.log(context.query);
+   // console.log("Logged Context!")
+   // console.log(newid)
     const objectId = new ObjectId(newid);
-    console.log(objectId)
+   // console.log(objectId)
 
     const client = await clientPromise;
     const db = client.db("lab_equipment");
