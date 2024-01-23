@@ -22,13 +22,12 @@ export default function Login() {
         e.preventDefault();
         try {
             const res = await signIn('credentials', {
-                loginEmail, loginPassword, redirect: false,
+                loginEmail, loginPassword, redirect: true, callbackUrl: '/equipment?=loggedin' 
             })
             console.log(res.user)
             if(res.error) {
                 setloginError("Invalid Credentials")    
             }
-            router.push(`/equipment?=loggedin`,  undefined, { shallow: true })
         } catch(loginError) {
             console.log(loginError)
         }

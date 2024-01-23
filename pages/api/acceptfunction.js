@@ -36,7 +36,7 @@ export default async function handler(req, res) {
       const updateQtyNum = await db.collection("lab").findOne({ name: sourceDocument.equipmentChoice})
       console.log(updateQtyNum)
       console.log(sourceDocument.equipmentChoice)
-      const numtoUpdate = updateQtyNum.borrowedqty + 1
+      const numtoUpdate = updateQtyNum.borrowedqty + parseInt(sourceDocument.Qty)
       
       if(updateQtyNum) {
         await db.collection("lab").updateOne({name: sourceDocument.equipmentChoice}, {$set:{borrowedqty: numtoUpdate}})

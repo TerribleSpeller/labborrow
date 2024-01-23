@@ -16,6 +16,7 @@ export default async function handler(req, res) {
             const resultCheck = await db.collection('approved_requests').findOne({ _id: objectId })
 
             const equipName = resultCheck.equipmentChoice
+            const numbertoReduce = parseInt(resultCheck.Qty)
             const returnStatePre = resultCheck.returnStat
 
       
@@ -26,7 +27,7 @@ export default async function handler(req, res) {
             
 
             if (returnStat == "true" & returnStatePre == "false") {
-              const numUpdate = await db.collection('lab').updateOne({name: equipName}, { $inc: {borrowedqty : -1}})
+              const numUpdate = await db.collection('lab').updateOne({name: equipName}, { $inc: {borrowedqty : -numbertoReduce}})
             }
             if (result.modifiedCount) {
               res.status(201).json({ message: 'Modification submitted successfully' });

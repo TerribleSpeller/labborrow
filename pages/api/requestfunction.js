@@ -12,7 +12,20 @@ export default async function handler(req, res) {
             const equiptoCheck = await db.collection('lab').findOne({name: equipmentChoice})
             console.log(equiptoCheck)
             if (equiptoCheck.qty > equiptoCheck.borrowedqty) {
-                pass
+                //console.log(equiptoCheck.qty )
+                //console.log(typeof(equiptoCheck.qty ))
+                //console.log(equiptoCheck.borrowedqty )
+                //console.log(typeof(equiptoCheck.borrowedqty))
+                var numberCheck = equiptoCheck.qty - equiptoCheck.borrowedqty;
+                var numberQty = parseInt(Qty)
+                //console.log(numberCheck)
+                //console.log(numberQty)
+                if(numberCheck >= numberQty) {
+                    console.log("So True!")
+                } else {
+                    res.status(404).json({message: "Borrowing Too Much"})
+                    return null;
+                }
             } else {
                 res.status(404).json({message: "Already Borrowed"})
                 return null;
