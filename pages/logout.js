@@ -6,8 +6,8 @@ import { GetServerSideProps } from "next";
 export default function Logout() {
     const router = useRouter();
 
-    const handleSubmit = () => {
-        signOut({ callbackUrl: '/' });
+    const handleSubmit = async () => {
+        await signOut({ callbackUrl: '/' });
 
     }  
 
