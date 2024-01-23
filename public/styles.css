@@ -40,3 +40,8 @@
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: #DEDEDE;}
+
+  .carousel .slide img {
+    max-height: 0.5vp;  /* change this to whatever you want */
+    object-fit: cover ;
+}

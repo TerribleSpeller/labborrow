@@ -56,11 +56,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item pt-3">
-              <Link href="/request" className="nav-link link-module" >
-              <span>Equipment</span>
-              </Link>
-            </li>
-            <li className="nav-item pt-3">
               
                 <div className="dropdown">
                   <button className="nav-link dropbtn btn">Lab Equipment</button>

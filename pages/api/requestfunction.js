@@ -3,7 +3,7 @@ import clientPromise, { connectToDatabase } from '../../lib/mongodb';
 export default async function handler(req, res) {
 
     if (req.method === 'POST') {
-        const { name, email, telephoneNumber, NIM, jurusan, equipmentChoice } = req.body;
+        const { name, email, telephoneNumber, NIM, jurusan, equipmentChoice, Reason, Qty, Lab, plandateofBorrow, plandateofReturn} = req.body;
         // Connect to the MongoDB database
         const client = await clientPromise;
         const db = client.db("lab_equipment");
@@ -30,6 +30,11 @@ export default async function handler(req, res) {
             NIM,
             jurusan,
             equipmentChoice,
+            Reason,
+            Qty,
+            Lab,
+            plandateofBorrow,
+            plandateofReturn,
         });
 
         res.status(201).json({ message: 'Request submitted successfully' });

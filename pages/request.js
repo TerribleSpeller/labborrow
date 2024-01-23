@@ -14,6 +14,11 @@ export default function request({equipment}) {
         NIM: '',
         jurusan: '',
         equipmentChoice: '',
+        Reason: '',
+        Qty: '',
+        Lab: '',
+        plandateofBorrow: '',
+        plandateofReturn: '',
       });   
 
     //Handler for Input Change
@@ -66,7 +71,7 @@ export default function request({equipment}) {
                 <br />
                 <label htmlFor="email">Email:</label>
                 <br />
-                <input type="text" id="email" name="email" value={session?.user.email} />
+                <input type="text" id="email" name="email" />
                 <br/>
                 <label htmlFor="telephoneNumber">No. Telefon:</label>
                 <br />
@@ -99,6 +104,27 @@ export default function request({equipment}) {
                     )}
                 </select>
                 <br/>
+                <label htmlFor="Reason">Reason:</label>
+                <br />
+                <input type="text" id="Reason" name="Reason" />
+                <br/>
+                <label htmlFor="Qty">Qty:</label>
+                <br />
+                <input type="text" id="Qty" name="Qty" />
+                <br/>
+                <label htmlFor="Lab">Lab:</label>
+                <br />
+                <select type="text" id="Lab" name="Lab">
+                    <option value="" selected disabled hidden>Choose here</option> 
+                    <option value="106">106</option>
+                    <option value="107">107</option>
+                    <option value="111">111</option>
+                    <option value="208">208</option>
+                </select><br />
+                <label for="plandateofBorrow">Date of Borrwing:</label><br />
+                <input type="date" id="plandateofBorrow" name="plandateofBorrow"/><br />
+                <label for="plandateofReturn">Date of Returning:</label><br />
+                <input type="date" id="plandateofReturn" name="plandateofReturn"/><br />
                 <input type="submit" value="Submit"/>
             </form>
         </div>

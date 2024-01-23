@@ -102,6 +102,13 @@ export default function equipment({ equip, returnProps }) {
                         <td>Email</td>
                         <td>No. Telefon</td>
                         <td>Item to Borrow</td>
+                        <td>Reason</td>
+                        <td>Qty</td>
+                        <td>Lab</td>
+                        <td>Planned Date</td>
+                        <td>Planned Return Date</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </thead>
                 <tbody>
@@ -115,6 +122,11 @@ export default function equipment({ equip, returnProps }) {
                                 <td>{object.email}</td>
                                 <td>{object.telephoneNumber}</td>
                                 <td>{object.equipmentChoice}</td>
+                                <td>{object.Reason}</td>
+                                <td>{object.Qty}</td>
+                                <td>{object.Lab}</td>
+                                <td>{object.plandateofBorrow}</td>
+                                <td>{object.plandateofReturn}</td>
                                 <td><button onClick={() => handleAccept(object._id)}>Accept</button></td>
                                 <td><button onClick={() => handleReject(object._id)}>Reject</button></td>
                             </tr>
@@ -141,6 +153,11 @@ export default function equipment({ equip, returnProps }) {
                         <td>Email</td>
                         <td>No. Telefon</td>
                         <td>Item Borrowed</td>
+                        <td>Reason</td>
+                        <td>Qty</td>
+                        <td>Lab</td>
+                        <td>Planned Date</td>
+                        <td>Planned Return Date</td>
                         <td>Returned?</td>
                         <td>Return Date</td>
                         <td>Return Condition</td>
@@ -158,6 +175,11 @@ export default function equipment({ equip, returnProps }) {
                                 <td>{object.email}</td>
                                 <td>{object.telephoneNumber}</td>
                                 <td>{object.equipmentChoice}</td>
+                                <td>{object.Reason}</td>
+                                <td>{object.Qty}</td>
+                                <td>{object.Lab}</td>
+                                <td>{object.plandateofBorrow}</td>
+                                <td>{object.plandateofReturn}</td>
                                 <td>{object.returnStat}</td>
                                 <td>{object.returnDate}</td>
                                 <td>{object.returnCon}</td>

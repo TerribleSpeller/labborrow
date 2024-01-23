@@ -29,7 +29,7 @@ export default async function handler(req, res) {
               const numUpdate = await db.collection('lab').updateOne({name: equipName}, { $inc: {borrowedqty : -1}})
             }
             if (result.modifiedCount) {
-              res.status(201).json({ message: 'Request submitted successfully' });
+              res.status(201).json({ message: 'Modification submitted successfully' });
             } else {
               res.status(404).json({ message: 'Document not found or not modified' });
             }

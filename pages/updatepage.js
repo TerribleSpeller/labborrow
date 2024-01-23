@@ -36,11 +36,11 @@ export default function UpdateFunction({ updateentry, id }) {
 
             if (response.ok) {
             console.log('Request submitted');
-            alert("Your Request has been submitted!\n");
+            alert("Modification has been submitted!\n");
             location.reload();
             } else {
-            console.error('Failed to submit request');
-            alert("Failed to submit Request!")
+            console.error('Failed to submit modification');
+            alert("Failed to Modify!")
             }
         } 
         catch (error) {
@@ -65,9 +65,15 @@ export default function UpdateFunction({ updateentry, id }) {
                     <td>Email</td>
                     <td>No. Telefon</td>
                     <td>Item Borrowed</td>
+                    <td>Reason</td>
+                    <td>Qty</td>
+                    <td>Lab</td>
+                    <td>Planned Date</td>
+                    <td>Planned Return Date</td>
                     <td>Returned?</td>
                     <td>Return Date</td>
                     <td>Return Condition</td>
+                    
                 </tr>
             </thead>
             <tbody>
@@ -81,6 +87,11 @@ export default function UpdateFunction({ updateentry, id }) {
                             <td>{object.email}</td>
                             <td>{object.telephoneNumber}</td>
                             <td>{object.equipmentChoice}</td>
+                            <td>{object.Reason}</td>
+                            <td>{object.Qty}</td>
+                            <td>{object.Lab}</td>
+                            <td>{object.plandateofBorrow}</td>
+                            <td>{object.plandateofReturn}</td>
                             <td>{object.returnStat}</td>
                             <td>{object.returnDate}</td>
                             <td>{object.returnCon}</td>

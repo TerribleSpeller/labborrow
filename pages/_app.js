@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import 'bootstrap/dist/css/bootstrap.css';
 import "../public/styles.css"
 import Head from 'next/head';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 function MyApp({ Component, pageProps }) {
