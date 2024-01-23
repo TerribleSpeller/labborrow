@@ -7,8 +7,7 @@ export default function Logout() {
     const router = useRouter();
 
     const handleSubmit = () => {
-        signOut();
-        router.push(`/?=loggedout`)
+        signOut({ callbackUrl: '/' });
 
     }  
 
