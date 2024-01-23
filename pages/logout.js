@@ -7,6 +7,7 @@ export default function Logout() {
     const router = useRouter();
 
     const handleSubmit = async () => {
+        e.preventDefault();
         await signOut({ callbackUrl: '/' });
 
     }  
