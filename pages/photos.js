@@ -102,6 +102,7 @@ export default function photos() {
 
                 </Carousel>
             </div>
+            <br/>
         </>
     )
 }

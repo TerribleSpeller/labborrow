@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <SessionProvider session={pageProps.session}>
       <AuthProvider>
         <Head>
-          <title>BINUS ASO LAB WEBSITE</title>
+          <title>BINUS ASO SCHOOL OF ENGINEERING LABORATORY WEBSITE</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#000000" />
           <meta

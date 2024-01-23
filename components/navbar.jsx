@@ -23,7 +23,7 @@ const Navbar = () => {
               href="/"
               className="d-flex link-module align-items-center mb-0 mb-md-0 me-md-auto link-body-emphasis link-color-unique text-decoration-none"
             >
-              <span className="fs-4">BASE ASO LAB Website</span>
+              <span className="fs-4">BINUS ASO SCHOOL OF ENGINEERING LABORATORY WEBSITE</span>
             </a>
           </div>
           <ul className="nav ">
