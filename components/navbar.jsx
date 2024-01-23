@@ -41,6 +41,15 @@ const Navbar = () => {
               </Link>
               </li>
             }
+             <li className="nav-item pt-3">  
+              <div className="dropdown">
+                <button className="nav-link dropbtn btn">Home</button>
+                <div class="dropdown-content">
+                  <Link href="/photos" className="nav-link link-module">Photos</Link>
+                  <Link href="/labs" className="nav-link link-module">BASE LABs</Link>
+                </div>
+              </div>
+          </li>
             <li className="nav-item pt-3 ">
               <Link href="/projects" className="nav-link link-module">
               <span>Projects</span>
@@ -60,6 +69,11 @@ const Navbar = () => {
                     <Link href="/request" className="nav-link link-module">Request Equipment</Link>
                   </div>
                 </div>
+            </li>
+            <li className="nav-item pt-3 ">
+              <Link href="/labactivities" className="nav-link link-module">
+              <span>Lab Activites</span>
+              </Link>
             </li>
             { session?.user?.admin == true &&
                 <li className="nav-item pt-3 ">

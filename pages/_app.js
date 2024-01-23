@@ -1,6 +1,6 @@
 // pages/_app.js
 import { SessionProvider } from 'next-auth/react';
-import { AuthProvider } from './Providers'
+import { AuthProvider } from '../components/Providers.js'
 import NavBar from '../components/navbar.jsx'
 import { useRouter } from 'next/router'
 import 'bootstrap/dist/css/bootstrap.css';
