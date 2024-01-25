@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function about() {
     return(
         <>
@@ -9,13 +11,10 @@ export default function about() {
             </div>
             <div className="container">
                 <h2>Contact Us</h2>
-                <br/>
                     <ul>
-                        <li>General Head of Lab:</li> 
-                        <li>Head of Lab 106:</li> 
-                        <li>Head of Lab 107:</li> 
-                        <li>Head of Lab 111:</li> 
-                        <li>Head of Lab 208:</li> 
+                        <li>Head of Lab: Muhammad Nurul Puji (0852-7940-5640)	 </li> 
+                        <li>Staff Lab: Faisal Kurniawan (0881-5935-518)</li> 
+                       
                         <li>Email: 
                         </li> 
                         <li>Technical Inquiries: 
@@ -29,7 +28,8 @@ export default function about() {
                     </h3>
                     <ul>
                         <li>Designed and Created using Next.js, Bootstrap, Next-Auth.js, and MongoDB</li>
-                        <li>Designed by Jason Alexander (2602188673) B2026</li>
+                        <li>Hosted on Vercel, Repository on <Link href="https://github.com/TerribleSpeller/labborrow">Github</Link> </li>
+                        <li>Designed by Jason Alexander (NIM: 2602188673) From Year 2026</li>
                         <li>Released under MIT License</li>
                     </ul>
             </div>

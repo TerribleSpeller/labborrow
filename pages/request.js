@@ -62,7 +62,7 @@ export default function request({equipment}) {
         <div onLoad={GetServerSideProps}>
             <h1>Request some Lab Equipment!</h1>
             <p>
-                Please contact Pak Faisal (08815935518) to inform that you;ve forwarded a request
+                Please contact Pak Faisal (08815935518) to inform that you've forwarded a request
             </p>
             <form onSubmit={handleSubmit} onChange={handleInputChange}>
                 <label htmlFor="name">Name:</label>
