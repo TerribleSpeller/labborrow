@@ -62,8 +62,7 @@ export default function labsDesc() {
                         <div>
                             <Image src={ergo2} width={400} height={400}/>
                         </div>
-
-                    </Carousel>
+                  </Carousel>
                 </div>
 
             </div>
@@ -74,10 +73,9 @@ export default function labsDesc() {
                         <div>
                             <Image src={com1} width={1000} height={400}/>
                         </div>
-
                     </Carousel>
                 </div>
-                <div id="com-lab-desc" className="p-2">
+                <div id="com-lab-desc" className="p-4">
                     <h2>Computer Lab (Room 111)</h2>
                     <br/>
                     <p>
@@ -123,8 +121,6 @@ export default function labsDesc() {
                         <div>
                             <Image src={lab2091} width={400} height={400}/>
                         </div>
-
-
                     </Carousel>
                 </div>
                 <div id="209-lab-desc" className="p-4">
