@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from 'next/navigation';
 import { GetServerSideProps } from "next";
 import { getServerSideProps } from "../pages/dashboard";
+import BaseLogo from '../public/images/logo_BASE.png'
 
 
 const Navbar = () => {
@@ -18,7 +19,14 @@ const Navbar = () => {
     <div className="container" id="Navbar" onLoad={GetServerSideProps}>
       <div className="row">
         <header className="d-flex flex-wrap justify-content-center pt-3">
-          <div className="stacked-title mb-3 mb-md-0 me-md-auto link-body-emphasis">
+        <Image 
+                                className="bi me-2 icon"
+                                width={124}
+                                height={96}
+                                src={BaseLogo}
+                                alt="BASE Logo"
+                            />
+          <div className="stacked-title mb-3 mb-md-0 me-md-auto link-body-emphasis  flex-wrap align-self-center">
             <a
               href="/"
               className="d-flex link-module align-items-center mb-0 mb-md-0 me-md-auto link-body-emphasis link-color-unique text-decoration-none"
