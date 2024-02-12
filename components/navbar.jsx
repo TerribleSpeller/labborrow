@@ -91,7 +91,7 @@ const Navbar = () => {
               <div className="dropdown">
                 <Link href="/about" className="nav-link link-module dropbtn"><span>About</span></Link>
                 <div class="dropdown-content">
-                    <Link href="/equipment" className="nav-link link-module">Affliated Clubs</Link>
+                    <Link href="/clubs" className="nav-link link-module">Affliated Clubs</Link>
                 </div>
               </div>
 

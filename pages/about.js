@@ -12,9 +12,7 @@ export default function about() {
             <div className="container">
                 <h2>Contact Us</h2>
                     <ul>
-                        <li>Head of Lab: Muhammad Nurul Puji (0852-7940-5640)	 </li> 
                         <li>Staff Lab: Faisal Kurniawan (0881-5935-518)</li> 
-                       
                         <li>Email: 
                         </li> 
                         <li>Technical Inquiries: 

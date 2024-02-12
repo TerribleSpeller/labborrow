@@ -183,7 +183,7 @@ export default function labsDesc() {
                     </Carousel>
                 </div>
                 <div id="monozukari-lab-desc" className="p-4">
-                    <h2>Monozukari Lab (Room 105)</h2>
+                    <h2>Monozukari Lab (Room 104)</h2>
                     <br/>
                     <p>This lab is for matters relating to understanding and learnign automotives practices and projects relating to it. There are tools such as cyclinder gauges, and micrometers that are often use to interact with pistons, and other Automotive Components. In addition, there is a Aerodynamics Machine to observe the aerodynamics of an objec.</p>
                 </div>
