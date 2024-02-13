@@ -7,13 +7,14 @@ export default function clubs() {
                 <h1>Affliated Clubs</h1>
             </div>
             <div className="container">
+                <br/>
                 <div className="container">
                     <Link href="https://www.basecore.tech/"><h3>BASE CORE</h3></Link>
-                    <p>This club began with the submission of a proposal for the formation of a student activity unit, but for one reason or another this club could only recognized and continued as a student club. The name of this club is BASE CORE, the word BASE itself is the name of the club's home campus, namely Binus Aso School of Engineering, and CORE is an abbreviation for Center of Research and Engineering which is the hope of this club to become the center of engineering research and engineering in BASE campus.</p>
+                    <p>BASE CORE, or Binus Aso School of Engineering Centre for Robotic Engineering, is a club that intends to  become the center of engineering research and engineering in BASE campus. With its three main divisions of - Robotic, Automotive, and Learning Divisions, the BASE CORE Club cooperates with the Lab in hopes that it'll be able to help ingrain into its club members a love of learning and the basic skills necessary to be able to innovate in the Robotics Field. </p>
                 </div>
                 <div className="container">
-                    <h3>SEM</h3>
-                    <p>SEM, </p>
+                    <h3>D'BASE</h3>
+                    <p>D'BASE, is a club that dedicates its fully to represent BINUS ASO in the Shell Eco Marathon, at Pertamina Mandalika International Circuit, Lombok. Due to the club's nature of innovating and creating automotive prototypes, they cooperate closely with the Labs in order to provide tools and materials for the club to be able to focus creating their prototypes, pushing the boundaries of automotive engineering. </p>
                 </div>
             </div>
         </>
